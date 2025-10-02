@@ -1,0 +1,35 @@
+1.2 Instalación del servidor Linux (apoyar con ejemplo practico)
+Codigos:
+pwd                  # Muestra en qué directorio estás
+cd /tmp              # Cambia al directorio temporal
+pwd                  # Verifica la nueva ubicación
+mkdir practicaLinux              # Crea un directorio
+cd practicaLinux                 # Entra al directorio
+touch archivo1.txt archivo2.txt  # Crea archivos vacíos
+ls -la                           # Lista los archivos creados
+echo "Hola Red Hat Linux" > archivo1.txt   # Escribir texto en archivo1.txt
+cat archivo1.txt                           # Leer archivo
+tac archivo1.txt                           # Leer archivo de abajo hacia arriba
+cp archivo1.txt copia.txt        # Copiar archivo
+mv archivo2.txt archivo2_ren.txt # Renombrar archivo
+mkdir respaldo                   # Crear carpeta de respaldo
+mv copia.txt respaldo/           # Mover copia.txt a respaldo
+ls -R                            # Lista en modo recursivo
+man ls                           # Manual del comando ls
+apropos copy                     # Busca comandos relacionados con "copy"
+which bash                       # Muestra dónde está instalado bash
+history | tail -10               # Últimos 10 comandos usados
+sudo updatedb                    # Actualiza base de locate
+locate archivo1.txt              # Busca archivo por nombre
+grep "Red Hat" archivo1.txt      # Busca palabra en archivo
+uname -a                         # Kernel y arquitectura
+cat /etc/redhat-release          # Versión de Red Hat
+sudo dnf install redhat-lsb-core -y   #Instalar lsb release
+lsb_release -d
+alias ll='ls -la'                # Crea un alias
+ll                               # Ejecuta alias (lista en detalle)
+sudo dnf install tree -y         # Instalar paquete con sudo
+tree .                           # Ver estructura de carpetas
+echo -e "ID Nombre\n1 Juan\n2 Maria\n3 Pedro" > datos.txt
+cat datos.txt
+awk '{print $2}' datos.txt       # Imprime la segunda columna (Nombres)
