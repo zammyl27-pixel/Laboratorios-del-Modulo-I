@@ -1,0 +1,28 @@
+Gestion de Permisos de archivos
+# 📂 Crear carpetas y archivos
+mkdir materia
+cd materia
+vi estudiante.txt                # Crear/editar archivo
+
+# 🔒 Permisos en archivo
+chmod 700 estudiante.txt         # Solo dueño: rwx
+chmod 070 estudiante.txt         # Solo grupo: rwx (dueño sin permisos)
+
+# 📂 Crear nueva carpeta y copiar archivo
+mkdir ../materia2
+cp estudiante.txt ../materia2
+
+# 🔎 Navegar y listar archivos
+cd ..
+ls
+cd materia2
+ls
+cat estudiante.txt               # Ver contenido del archivo
+
+# 🗑️ Eliminar carpeta
+cd ..
+rm -r materia
+ls
+
+# 🧹 Limpiar pantalla
+clear
