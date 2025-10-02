@@ -1,0 +1,23 @@
+Gestion de Usuario y grupos
+# 👤 Crear usuarios
+sudo adduser gabriela
+sudo adduser zammyl
+
+# 👥 Administrar grupos
+sudo usermod -aG wheel gabriela                # Agregar a 'wheel' (sudoers)
+sudo groupadd guest                            # Crear grupo 'guest'
+sudo usermod -aG guest zammyl                  # Agregar usuario a grupo
+sudo gpasswd -d gabriela wheel                 # Quitar usuario de grupo
+
+# 🔎 Verificación de grupos
+groups gabriela
+groups zammyl
+getent passwd gabriela                         # Ver información del usuario
+
+# 🗑️ Eliminar usuarios y grupos
+sudo userdel -r zammyl
+sudo userdel -r gabriela
+sudo groupdel guest
+
+# 📂 Utilidades
+ls
