@@ -1,0 +1,24 @@
+# 🔎 Ver información de red
+ipconfig          # (Windows) Ver configuración IP
+ip addr show      # (Linux) Mostrar interfaces de red
+ip route          # Ver tabla de enrutamiento
+
+# 🧹 Limpiar pantalla
+clear
+
+# ⚙️ Configuración automática (DHCP)
+sudo nmcli con mod ens160 ipv4.method auto
+sudo nmcli con up ens160
+
+# ⚙️ Configuración manual (estática)
+sudo ip addr flush dev ens160                           # Eliminar IPs previas
+sudo ip addr add 192.168.25.1/24 dev ens160             # Asignar IP manual
+sudo nmcli con mod ens160 ipv4.addresses 192.168.20.1/24
+sudo nmcli con mod ens160 ipv4.gateway 192.168.25.254
+sudo nmcli con mod ens160 ipv4.method manual
+sudo nmcli con mod ens160 ipv4.dns "8.8.8.8 8.8.4.4"
+sudo nmcli con up ens160
+
+# 🌐 Pruebas de conectividad
+ping -c 4 8.8.8.8       # Probar conectividad con Google DNS
+ping -c 4 google.com    # Probar resolución DNS y conectividad
